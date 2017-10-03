@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 0px;
+    background-color: darkblue;
+}
+
+header {
+    background-color: black;
+    background-image: url(https://templates.utah.edu/_main-v2/_images/header/background/blue.jpg);
+    color: rgba(107, 164, 234, 0.80);
+    padding: 25px;
+}
+
+section {
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: darkblue;
+}
+
+
+
+
+@media (min-width: 1000px) {
+    .container {
+        display: grid;
+        margin: 0 0 0 0px;
+        grid-template-columns: 2fr 2fr minmax(auto, 0.5fr);
+
+        grid-template-rows:
+        minmax(100px, auto)
+        minmax(60px, auto)
+        minmax(400px, auto)
+        minmax(250px, auto)
+        minmax(150px, auto);
+
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        grid-template-areas:
+        'article article navigation'
+        'aside-1 aside-1 navigation'
+        'main-1 main-2 navigation'
+        'aside-2 aside-2 navigation'
+        'footer footer navigation'
+    }
+
+    .navigation {
+        grid-area: navigation;
+        margin: 0 0 0 0px;
+        grid-template-rows: auto auto auto;
+
+        grid-template-columns: 1fr;
+
+
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        grid-template-areas:
+        'navItem'
+        'navItem'
+        'navItem';
+
+        background-color: darkblue;
+        position: fixed;
+        right: 0%;
+        width: auto;
+    }
+
+    p.inline {
+    display: inline;
+}
+}
+
+
+
+@media (min-width: 600px; max-width: 999px)
+{
+    .container {
+        display: grid;
+        margin: 0 0 0 0px;
+        grid-template-columns: 2fr 2fr;
+
+        grid-template-rows:
+        minmax(100px, auto)
+        minmax(60px, auto)
+        minmax(400px, auto)
+        minmax(250px, auto)
+        minmax(150px, auto)
+        minmax(58px, auto);
+
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        grid-template-areas:
+        'article article'
+        'aside-1 aside-1'
+        'main-1 main-2'
+        'aside-2 aside-2'
+        'footer footer'
+        'navigation navigation';
+    }
+
+    .navigation {
+        grid-area: navigation;
+        margin: 0 0 0 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-rows:
+        minmax(58px, auto);
+
+
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        grid-template-areas:
+        'navItem navItem navItem';
+
+        background-color: darkblue;
+        position: fixed;
+        width: 100%;
+        bottom: 0%;
+    }
+
+    p.inline {
+        display: inline;
+    }
+
+
+}
+
+@media (max-width: 599px) {
+    .container {
+        display: grid;
+        margin: 0 0 0 0px;
+
+
+        grid-gap: 1px;
+        grid-template-rows: auto 1fr auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'article'
+                             'aside-1'
+                             'main-1'
+                             'main-2'
+                             'aside-2'
+                             'footer'
+                             'navigation';
+    }
+
+    .navigation {
+        grid-area: navigation;
+        margin: 0 0 0 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        grid-template-rows:
+        minmax(58px, auto);
+
+
+        grid-row-gap: 1px;
+        grid-column-gap: 1px;
+        grid-template-areas:
+        'navItem';
+
+        background-color: darkblue;
+        position: fixed;
+        width: 100%;
+        bottom: 0%;
+    }
+
+    p.inline {
+        display: inline;
+    }
+}
+
+.semantic-grid-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.article {
+    grid-area: article;
+    background-color: white;
+}
+
+.navItem {
+    grid-area: navItem;
+    width: inherit;
+    color: white;
+}
+
+.main-1 {
+    grid-area: main-1;
+    background-color: lightgray;
+}
+
+.main-2 {
+    grid-area: main-2;
+   background-color: darkgray;
+}
+
+.aside-1 {
+    grid-area: aside-1;
+    padding: 20 0 0 0px;
+    background-color: lightgray;
+}
+
+#fixed-item {
+    bottom: 0%;
+    padding: 20 20 20 20px;
+    position: fixed;
+
+    color: white;
+    background-color: darkblue;
+}
+
+#fixed-item a {
+    color: white;
+}
+
+.aside-2 {
+    grid-area: aside-2;
+    background-color: white;
+}
+.footer {
+    grid-area: footer;
+    background-color: lightgray;
+}
+
+span.section-title > a {
+    color: white;
+}
