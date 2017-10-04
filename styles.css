@@ -12,20 +12,28 @@ header {
 }
 
 section {
-    background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: darkblue;
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    margin-left: -0px;
+    padding-left: -0px;
+}
+
+li {
+    padding-left: 10px;
 }
 
 
-
-
-@media (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
     .container {
         display: grid;
         margin: 0 0 0 0px;
-        grid-template-columns: 2fr 2fr minmax(auto, 0.5fr);
+        grid-template-columns: 2fr 2fr minmax(200px, 0.4fr);
 
         grid-template-rows:
         minmax(100px, auto)
@@ -59,20 +67,25 @@ section {
         'navItem'
         'navItem';
 
-        background-color: darkblue;
+        background-color: #333;
         position: fixed;
         right: 0%;
+        bottom: 0%;
         width: auto;
     }
 
-    p.inline {
-    display: inline;
+    ul {
+        padding: 15 0 15 0px;
+    }
+
+    li {
+        padding: 15 0 15 0px;
+    }
+
 }
-}
 
 
-
-@media (min-width: 600px; max-width: 999px)
+@media only screen and (min-width: 700px) and (max-width: 999px)
 {
     .container {
         display: grid;
@@ -112,20 +125,25 @@ section {
         grid-template-areas:
         'navItem navItem navItem';
 
-        background-color: darkblue;
+        background-color: #333;
         position: fixed;
         width: 100%;
         bottom: 0%;
     }
 
-    p.inline {
+
+
+    ul {
         display: inline;
     }
 
+    li {
+        display: inline;
+    }
 
 }
 
-@media (max-width: 599px) {
+@media only screen and (max-width: 699px) {
     .container {
         display: grid;
         margin: 0 0 0 0px;
@@ -133,7 +151,7 @@ section {
 
         grid-gap: 1px;
         grid-template-rows: auto 1fr auto auto auto auto auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-areas: 'article'
                              'aside-1'
                              'main-1'
@@ -157,15 +175,51 @@ section {
         grid-template-areas:
         'navItem';
 
-        background-color: darkblue;
+        background-color: #333;
         position: fixed;
         width: 100%;
         bottom: 0%;
     }
 
-    p.inline {
-        display: inline;
+    ul {
+        margin-left: -15px;
     }
+
+    li {
+        margin-left: -15px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 668px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 699px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
 }
 
 .semantic-grid-section {
@@ -224,4 +278,35 @@ section {
 
 span.section-title > a {
     color: white;
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    height: 50px;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
 }

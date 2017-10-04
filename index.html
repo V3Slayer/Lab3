@@ -26,7 +26,7 @@
                 </article>
                 <aside class="semantic-grid-section aside-1">
                     <span class="section-title">Our Mission</span>
-                    <p><img align="left" src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738"></p>
+                    <p><img align=left src="https://tctechcrunch2011.files.wordpress.com/2015/04/codecode.jpg?w=738"></p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in lorem ut dolor ullamcorper blandit.
                             Nulla blandit, quam nec posuere semper, erat sem eleifend enim, ut convallis eros odio id enim. Duis ultrices erat nulla, vel maximus felis pellentesque in.
                             Mauris convallis vitae eros dictum molestie. Proin vel sem eget urna ullamcorper vestibulum eu vitae eros. Etiam ac semper enim.
@@ -64,6 +64,7 @@
                     Maecenas egestas ornare nunc, eget pulvinar tortor. Duis pretium enim ac sapien dignissim bibendum. In non nisl at lacus porttitor bibendum nec convallis purus.</p>
                 </main>
                 <aside class="semantic-grid-section aside-2">
+                    <a name="closing"></a>
                     <span class="section-title">Aside-2</span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in lorem ut dolor ullamcorper blandit.
                     Nulla blandit, quam nec posuere semper, erat sem eleifend enim, ut convallis eros odio id enim. Duis ultrices erat nulla, vel maximus felis pellentesque in.
@@ -97,13 +98,32 @@
                 <footer class="semantic-grid-section footer">
                     <a name="contact"></a>
                     <span class="section-title">Contact Us!</span>
+                    <p>Shaun Carroll</p>
+                    <p>carrol50@go.stockton.edu</p>
                 </footer>
                 <nav class="semantic-grid-section navigation">
-                    <p><a class="semantic-grid-section navItem" href="#top">Back to the top</a></p>
-                    <p><a class="semantic-grid-section navItem" href="#main">Main Info</a></p>
-                    <p><a class="semantic-grid-section navItem" href="#contact">Contact Us</a></p>
+                    <div class="topnav" id="myTopnav">
+                        <ul>
+                            <li><a class="navItem" href="#top">Back to the top</a></li>
+                            <li><a href="#main">Main Info</a></li>
+                            <li><a href="#closing">Closing Remarks</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+                        </ul>
+                    </div>
+
                 </nav>
             </div>
         </section>
+        <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
     </body>
 </html>
